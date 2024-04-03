@@ -1,9 +1,8 @@
-import java.text.ParseException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.DateTimeException;
 import java.time.LocalDate;
-import java.util.Arrays;
-import java.util.Date;
 import java.util.Scanner;
 
 /*
@@ -32,25 +31,29 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите данные в следующем формате: \n" +
-                "Фамилия Имя Отчество дата_рождения номер_телефона пол\n" +
-                "где: \n" +
-                "дата рождения - в виде dd.mm.yyyy\n" +
-                "номер телефона - ########## (десять цифр)\n" +
-                "пол - символ f или m");
-//        String input = scanner.nextLine();
-        String input = "Мендельсон Хуан Карлович 03.02.1917 1231201218 m";
-        // Хуан Карлович Мендельсон 25.05.1917 1231231212 m
-        System.out.println(input);
+        String[] data;
+        do {
+            System.out.println("""
+                    Введите данные в следующем формате:\s
+                    Фамилия Имя Отчество дата_рождения номер_телефона пол
+                    где:\s
+                    дата рождения - в виде dd.mm.yyyy
+                    номер телефона - ########## (десять цифр)
+                    пол - символ f или m""");
+            String input = scanner.nextLine();
+            data = input.split(" ");
+        } while (checkInput(data) != 0);
+        if (checkInfo(data)) {
+            Person person01 = new Person(data);
 
-        String[] data = input.split(" ");
-        System.out.println(Arrays.toString(data));
-
-//        System.out.println(checkInput(data));
-//        boolean hasDigits = data[0].matches(".*\\d.*");
-        System.out.println(containsAlphabeticOnly(data[0]));
-        System.out.println(data[3]);
-        System.out.println(checkInfo(data));
+            String fileName = person01.getLastName() + ".txt";
+            try (FileWriter fr = new FileWriter(fileName, true)) {
+                fr.write(person01 + "\n");
+                fr.flush();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     public static int checkInput(String[] arr) {
@@ -68,10 +71,10 @@ public class Main {
         for (int i = 0; i < str.length(); i++) {
             char c = str.charAt(i);
             if (Character.isDigit(c) || !Character.isAlphabetic(c)) {
-                return false;
+                return true;
             }
         }
-        return true;
+        return false;
     }
 
     public static boolean checkBirthDay(String str) {
@@ -95,7 +98,7 @@ public class Main {
         } catch (Exception e) {
             throw new DateTimeException("Внимательнее вводите дату рождения!");
         }
-        SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
+//        SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
         return result;
     }
 
@@ -124,16 +127,16 @@ public class Main {
     }
 
     public static boolean checkInfo(String[] arr) {
-        boolean result = true;
-        if (!containsAlphabeticOnly(arr[0])) {
+        boolean result;
+        if (containsAlphabeticOnly(arr[0])) {
             result = false;
             throw new IllegalArgumentException("Некорректная фамилия");
         }
-        if (!containsAlphabeticOnly(arr[1])) {
+        if (containsAlphabeticOnly(arr[1])) {
             result = false;
             throw new IllegalArgumentException("Некорректное имя");
         }
-        if (!containsAlphabeticOnly(arr[2])) {
+        if (containsAlphabeticOnly(arr[2])) {
             result = false;
             throw new IllegalArgumentException("Некорректное отчество");
         } //else result = true;

@@ -1,4 +1,3 @@
-import java.util.Date;
 import java.util.Objects;
 
 public class Person {
@@ -6,10 +5,10 @@ public class Person {
     private String lastName;
     private String middleName;
     private String whenBorn;
-    private int phoneNumber;
+    private long phoneNumber;
     private char gender;
 
-    public Person(String name, String lastName, String middleName, String whenBorn, int phoneNumber, char gender) {
+    public Person(String name, String lastName, String middleName, String whenBorn, long phoneNumber, char gender) {
         this.name = name;
         this.lastName = lastName;
         this.middleName = middleName;
@@ -23,12 +22,16 @@ public class Person {
         this.lastName = arr[0];
         this.middleName = arr[2];
         this.whenBorn = arr[3];
-        this.phoneNumber = Integer.parseInt(arr[4]);
+        this.phoneNumber = Long.parseLong(arr[4]);
         this.gender = arr[5].charAt(0);
     }
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getLastName() {
+        return lastName;
     }
 
     public void setLastName(String lastName) {
@@ -43,7 +46,7 @@ public class Person {
         this.whenBorn = whenBorn;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(long phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
@@ -53,14 +56,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", middleName='" + middleName + '\'' +
-                ", whenBorn='" + whenBorn + '\'' +
-                ", phoneNumber=" + phoneNumber +
-                ", gender=" + gender +
-                '}';
+        return String.format("<%s> <%s> <%s> <%s> <%s> <%s>", lastName, name, middleName, whenBorn, phoneNumber, gender);
     }
 
     @Override
