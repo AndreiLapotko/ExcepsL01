@@ -3,10 +3,18 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Exceps.iml" filepath="$PROJECT_DIR$/.idea/Exceps.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Seminar02/HomeWork2/HW_Task01/HW_Task01.iml" filepath="$PROJECT_DIR$/Seminar02/HomeWork2/HW_Task01/HW_Task01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Seminar02/HomeWork2/HW_Task02/HW_Task02.iml" filepath="$PROJECT_DIR$/Seminar02/HomeWork2/HW_Task02/HW_Task02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Seminar02/HomeWork2/HW_Task03/HW_Task03.iml" filepath="$PROJECT_DIR$/Seminar02/HomeWork2/HW_Task03/HW_Task03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Seminar02/HomeWork2/HW_Task04/HW_Task04.iml" filepath="$PROJECT_DIR$/Seminar02/HomeWork2/HW_Task04/HW_Task04.iml" />
       <module fileurl="file://$PROJECT_DIR$/Seminar01/HomeWork/HomeWork.iml" filepath="$PROJECT_DIR$/Seminar01/HomeWork/HomeWork.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Seminar01/Task01/Task01.iml" filepath="$PROJECT_DIR$/Seminar01/Task01/Task01.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Seminar01/Task02/Task02.iml" filepath="$PROJECT_DIR$/Seminar01/Task02/Task02.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Seminar01/Task03/Task03.iml" filepath="$PROJECT_DIR$/Seminar01/Task03/Task03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Seminar02/HomeWork2/HomeWork2.iml" filepath="$PROJECT_DIR$/Seminar02/HomeWork2/HomeWork2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Seminar02/Seminar02.iml" filepath="$PROJECT_DIR$/Seminar02/Seminar02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Seminar01/Task01/Task00.iml" filepath="$PROJECT_DIR$/Seminar01/Task01/Task00.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Seminar02/Task001/Task001.iml" filepath="$PROJECT_DIR$/Seminar02/Task001/Task001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Seminar02/Task002/Task002.iml" filepath="$PROJECT_DIR$/Seminar02/Task002/Task002.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Seminar02/Task003/Task003.iml" filepath="$PROJECT_DIR$/Seminar02/Task003/Task003.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Seminar01/Task03/Task02.iml" filepath="$PROJECT_DIR$/Seminar01/Task03/Task02.iml" />
       <module fileurl="file://$PROJECT_DIR$/Seminar01/Task04/Task04.iml" filepath="$PROJECT_DIR$/Seminar01/Task04/Task04.iml" />
       <module fileurl="file://$PROJECT_DIR$/Seminar01/HomeWork/Task1/Task1.iml" filepath="$PROJECT_DIR$/Seminar01/HomeWork/Task1/Task1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Seminar01/HomeWork/Task2/Task2.iml" filepath="$PROJECT_DIR$/Seminar01/HomeWork/Task2/Task2.iml" />
